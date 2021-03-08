@@ -24,5 +24,38 @@ public class Libretto {
 		return s;
 	}
 	
+	//secondo punto
+	/*
+	public void stampaVotiUguali(int punteggio) {
+		//il libretto stampa da solo i voti
+		//metodo troppo specifico, stampa e basta
+	}
+	
+	public String votiUguali1(int punteggio) {
+		//calcolau una stringa che contiene i voti, sarà poi il chiamante a stamparli
+		//metodo più generale, posso fare altro ai voti trovati
+		//non so però cosa voglio stampare, solo il nome?
+		return null;
+	}
+	*/
+	
+	public List<Voto> listaVotiUguali(int punteggio) {
+		//restituisce solo i voti uguali al criterio, e decide poi il test come stamparlo
+		List<Voto> risultato=new ArrayList<Voto>();
+		for(Voto v:this.voti) {
+			if(v.getVoto()==punteggio)
+				risultato.add(v);
+		}
+		return risultato;
+	}
+	
+	public Libretto votiUguali(int punteggio) {
+		Libretto risultato=new Libretto();
+		for(Voto v:this.voti) {
+			if(v.getVoto()==punteggio)
+				risultato.add(v);
+		}
+		return risultato;
+	}
 	
 }
