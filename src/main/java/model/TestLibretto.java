@@ -1,7 +1,7 @@
 package model;
 
 import java.time.LocalDate;
-import java.util.List;
+//import java.util.List;
 
 public class TestLibretto {
 	
@@ -23,6 +23,9 @@ public class TestLibretto {
 		
 		Libretto venticinque=libretto.votiUguali(25);
 		System.out.println(venticinque);
+		
+		Voto risultato=libretto.ricercaCorso("Algebra");
+		System.out.println(risultato);
 	}
 
 }
