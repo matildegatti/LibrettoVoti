@@ -26,6 +26,13 @@ public class TestLibretto {
 		
 		Voto risultato=libretto.ricercaCorso("Algebra");
 		System.out.println(risultato);
+		
+		Voto algebra=libretto.ricercaCorso("Algebra");
+		Voto algebradoppio=new Voto("Algebra", 25, LocalDate.of(2019, 03, 05));
+		Voto algebraconflitto=new Voto("Algebra", 29, LocalDate.of(2019, 03, 05));
+		System.out.println(algebradoppio + " doppione di " + algebra+"?  " + libretto.esisteDuplicato(algebradoppio));
+		System.out.println(algebraconflitto + " conflitto di " + algebra+"?  "+libretto.esisteConflitto(algebraconflitto));
 	}
+	
 
 }
